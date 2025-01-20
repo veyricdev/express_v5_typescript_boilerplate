@@ -1,0 +1,30 @@
+# Express V5 Boilerplate
+
+```code
+Hey There! 🐱‍🏍
+```
+
+## 🎉 Introduction
+
+Welcome to the Express V5 TypeScript Boilerplate
+
+## 🚀 Features
+
+- 📁 Modular Structure
+- 💻 TypeScript Support
+- 📦 Package Management With Bun Support
+- 🔗 Path Aliases
+- 🔒 Security: Helmet for HTTP header security and CORS setup
+- 👀 Logging: Efficient logging with `pino`
+- 🔧 Environment Variables: Managed with Envalid
+- 🐱‍👓 Build With SWC
+
+### Step-by-Step Guide
+
+- Install dependencies: `bun install` | `npm ci` | `yarn`
+- Environment Configuration:
+  - Create `.env`: Copy `.env.example` to `.env`
+  - Update `.env`: Fill in necessary environment variables
+- Running the Project:
+  - Development Mode: `bun dev` | `npm run dev` | `yarn dev`
+  - Building: `bun run build` | `npm run build` | `yarn build`

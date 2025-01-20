@@ -1,0 +1,22 @@
+{
+  "minify": true,
+  "jsc": {
+    "target": "es2016",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "#/*": ["./types/*"]
+    },
+    "parser": {
+      "syntax": "typescript"
+    },
+    "minify": {
+      "compress": true,
+      "mangle": true
+    }
+  },
+  "module": {
+    "type": "commonjs"
+  },
+  "sourceMaps": false
+}

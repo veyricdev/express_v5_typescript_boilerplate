@@ -1,5 +1,4 @@
 import type { Express } from 'express'
-import errorHandle from '~/middlewares/errorHandle'
 import errorsRouter from './errors'
 
 export const router = (app: Express) => {
@@ -7,10 +6,7 @@ export const router = (app: Express) => {
 		res.status(200).send('pong!')
 	})
 
-	app.use('/errors', errorsRouter)
-
-	// Error Handle
-	app.use(errorHandle)
+	app.use(errorsRouter.PREFIX, errorsRouter.router)
 }
 
 export default router

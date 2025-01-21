@@ -1,8 +1,5 @@
 # Express V5 Boilerplate
 
-```code
-Hey There! 🐱‍🏍
-```
 
 ## 🎉 Introduction
 

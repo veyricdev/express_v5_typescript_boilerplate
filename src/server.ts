@@ -1,3 +1,5 @@
+// @ts-ignore
+import { apiReference } from '@scalar/express-api-reference'
 import compression from 'compression'
 import cors from 'cors'
 import express from 'express'
@@ -7,11 +9,10 @@ import { corsOptions } from '~/configs/cors'
 import limiter from '~/configs/rate-limit'
 import { IS_PROD } from '~/constants'
 import router from '~/routes'
+import { generateOpenAPIDocument } from './docs'
+import errorHandle from './middlewares/errorHandle'
 
 const app = express()
-
-// Set the application to trust the reverse proxy
-app.set('trust proxy', true)
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -25,5 +26,18 @@ if (IS_PROD) {
 
 // Routes
 router(app)
+
+// Error Handle
+app.use(errorHandle)
+
+// API Docs
+app.use(
+	'/docs',
+	apiReference({
+		spec: {
+			content: generateOpenAPIDocument(),
+		},
+	})
+)
 
 export { app }

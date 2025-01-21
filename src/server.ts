@@ -1,4 +1,3 @@
-// @ts-ignore
 import { apiReference } from '@scalar/express-api-reference'
 import compression from 'compression'
 import cors from 'cors'

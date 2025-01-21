@@ -7,6 +7,9 @@
     "clean": "rimraf dist",
     "build": "swc src -d dist",
     "start": "node dist/src/index.js",
+    "lint": "biome check src/",
+    "lint:fix": "biome check src/ --fix",
+    "format": "biome format src/ --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -86,6 +89,7 @@
     "vary": "^1.1.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.10.8",
     "@types/compression": "^1.7.5",

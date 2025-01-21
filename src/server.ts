@@ -1,12 +1,12 @@
+import compression from 'compression'
+import cors from 'cors'
 import express from 'express'
 import helmet from 'helmet'
-import cors from 'cors'
-import compression from 'compression'
 
-import router from '~/routes'
-import limiter from '~/configs/rate-limit'
 import { corsOptions } from '~/configs/cors'
+import limiter from '~/configs/rate-limit'
 import { IS_PROD } from '~/constants'
+import router from '~/routes'
 
 const app = express()
 
@@ -18,9 +18,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors(corsOptions))
 
 if (IS_PROD) {
-  app.use(helmet())
-  app.use(compression())
-  app.use(limiter)
+	app.use(helmet())
+	app.use(compression())
+	app.use(limiter)
 }
 
 // Routes

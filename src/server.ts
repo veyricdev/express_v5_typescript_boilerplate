@@ -3,6 +3,7 @@ import compression from 'compression'
 import cors from 'cors'
 import express from 'express'
 import helmet from 'helmet'
+import morgan from 'morgan'
 
 import { corsOptions } from '~/configs/cors'
 import limiter from '~/configs/rate-limit'
@@ -16,6 +17,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors(corsOptions))
+app.use(morgan(IS_PROD ? 'combined' : 'dev'))
 
 if (IS_PROD) {
 	app.use(helmet())

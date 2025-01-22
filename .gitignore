@@ -2,9 +2,6 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 
 ### Node ###
-# Logs
-logs/*.log
-*.log
 yarn.lock
 npm-debug.log*
 yarn-debug.log*

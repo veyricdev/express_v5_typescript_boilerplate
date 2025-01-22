@@ -92,7 +92,9 @@
 		"type-is": "^1.6.18",
 		"unpipe": "^1.0.0",
 		"utils-merge": "^1.0.1",
-		"vary": "^1.1.2"
+		"vary": "^1.1.2",
+		"winston": "^3.17.0",
+		"winston-daily-rotate-file": "^5.0.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",

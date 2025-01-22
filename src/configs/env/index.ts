@@ -6,4 +6,5 @@ export const env = cleanEnv(process.env, {
 	HOST: host({ default: 'localhost' }),
 	PORT: port({ default: 6606 }),
 	LOG_DEBUG: bool({ default: true }),
+	LOG_FILE: bool({ default: true }),
 })

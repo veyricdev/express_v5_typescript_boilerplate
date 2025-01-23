@@ -5,6 +5,8 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 
 import { corsOptions } from '~/configs/cors'
+import { checkOverload } from '~/configs/db/check-connect'
+import { env } from '~/configs/env'
 import limiter from '~/configs/rate-limit'
 import { IS_PROD } from '~/constants'
 import { generateOpenAPIDocument } from '~/docs'
@@ -23,6 +25,10 @@ if (IS_PROD) {
 	app.use(compression())
 	app.use(limiter)
 }
+
+// Db
+import '~/configs/db'
+env.DB_CHECK_OVERLOAD && checkOverload()
 
 // Routes
 router(app)

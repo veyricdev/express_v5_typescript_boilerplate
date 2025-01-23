@@ -1,0 +1,19 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"dependencyDashboard": true,
+	"lockFileMaintenance": {
+		"enabled": true
+	},
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["*"],
+			"groupName": "all-dependencies",
+			"automerge": false
+		},
+		{
+			"matchDepTypes": ["devDependencies"],
+			"groupName": "dev-dependencies",
+			"automerge": false
+		}
+	]
+}

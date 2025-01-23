@@ -89,6 +89,7 @@
 		"side-channel-map": "^1.0.1",
 		"side-channel-weakmap": "^1.0.2",
 		"statuses": "^2.0.1",
+		"telegraf": "^4.16.3",
 		"toidentifier": "^1.0.1",
 		"type-is": "^1.6.18",
 		"unpipe": "^1.0.0",

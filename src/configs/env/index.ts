@@ -29,4 +29,8 @@ export const env = cleanEnv(process.env, {
 	PROD_DB_POOL_MAX: num({ default: 50 }),
 	PROD_DB_SELECTION_TIMEOUT: num({ default: 5000 }),
 	PROD_DB_SOCKET_TIMEOUT: num({ default: 45000 }),
+
+	// Telegram
+	TELE_BOT_TOKEN: str({ default: '' }),
+	TELE_CHAT_ID: str({ default: '' }),
 })

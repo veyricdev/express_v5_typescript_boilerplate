@@ -16,7 +16,7 @@ Welcome to the Express V5 TypeScript Boilerplate
 - 🔧 Environment Variables: Managed with Envalid
 - 🐱‍👓 Build With SWC
 - 🎡 Support Repository and Service
-- 🎮 Send log error use Telegram bot
+- 🎮 Send log error use Telegram bot - use `telegraf` with error `ETIMEDOUT` (TODO fix)
 
 ### Step-by-Step Guide
 

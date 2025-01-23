@@ -27,13 +27,14 @@
 				"noNonNullAssertion": "off"
 			},
 			"complexity": {
-				"noForEach": "off"
+				"noForEach": "off",
+				"noBannedTypes": "off"
 			},
-      "correctness": {
-        "recommended": true,
-        "noUnusedVariables": "warn",
-        "noUnusedImports": "warn",
-        "noUnusedFunctionParameters": "warn"
+			"correctness": {
+				"recommended": true,
+				"noUnusedVariables": "warn",
+				"noUnusedImports": "warn",
+				"noUnusedFunctionParameters": "warn"
 			}
 		}
 	}

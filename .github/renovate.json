@@ -6,12 +6,16 @@
 	},
 	"packageRules": [
 		{
-			"matchPackagePatterns": ["*"],
 			"groupName": "all-dependencies",
-			"automerge": false
+			"automerge": false,
+			"matchPackageNames": [
+				"*"
+			]
 		},
 		{
-			"matchDepTypes": ["devDependencies"],
+			"matchDepTypes": [
+				"devDependencies"
+			],
 			"groupName": "dev-dependencies",
 			"automerge": false
 		}

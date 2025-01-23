@@ -3,6 +3,7 @@ import { bool, cleanEnv, host, num, port, str } from 'envalid'
 
 export const env = cleanEnv(process.env, {
 	NODE_ENV: str({ choices: ['dev', 'prod', 'test'], default: 'dev' }),
+	APP_NAME: str({ default: 'Express V5 Typescript Boilerplate' }),
 	HOST: host({ default: 'localhost' }),
 	PORT: port({ default: 6606 }),
 	LOG_DEBUG: bool({ default: true }),

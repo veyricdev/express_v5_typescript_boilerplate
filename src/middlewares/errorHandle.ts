@@ -22,6 +22,7 @@ export default function errorHandle(err: Error, _req: Request, res: Response, _n
 			.sendMessage(
 				env.TELE_CHAT_ID,
 				`
+							\[${env.NODE_ENV.toUpperCase()}\] ${env.APP_NAME}
 							Error:
 								code: \`${statusCode}\`
 								message: \`${err.message}\`

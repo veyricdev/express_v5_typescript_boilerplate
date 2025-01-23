@@ -12,9 +12,11 @@ Welcome to the Express V5 TypeScript Boilerplate
 - 📦 Package Management With Bun Support
 - 🔗 Path Aliases
 - 🔒 Security: Helmet for HTTP header security and CORS setup
-- 👀 Logging: Efficient logging with `pino`
+- 👀 Logging: Efficient logging with `pino`, `morgan` and `winston`
 - 🔧 Environment Variables: Managed with Envalid
 - 🐱‍👓 Build With SWC
+- 🎡 Support Repository and Service
+- 🎮 Send log error use Telegram bot
 
 ### Step-by-Step Guide
 

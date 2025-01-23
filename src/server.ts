@@ -1,4 +1,3 @@
-import { apiReference } from '@scalar/express-api-reference'
 import compression from 'compression'
 import cors from 'cors'
 import express from 'express'
@@ -8,9 +7,9 @@ import morgan from 'morgan'
 import { corsOptions } from '~/configs/cors'
 import limiter from '~/configs/rate-limit'
 import { IS_PROD } from '~/constants'
+import { generateOpenAPIDocument } from '~/docs'
+import errorHandle from '~/middlewares/errorHandle'
 import router from '~/routes'
-import { generateOpenAPIDocument } from './docs'
-import errorHandle from './middlewares/errorHandle'
 
 const app = express()
 
@@ -32,13 +31,13 @@ router(app)
 app.use(errorHandle)
 
 // API Docs
-app.use(
-	'/docs',
-	apiReference({
+app.use('/docs', async (req, res) => {
+	const { apiReference } = await import('@scalar/express-api-reference')
+	return apiReference({
 		spec: {
 			content: generateOpenAPIDocument(),
 		},
-	})
-)
+	})(req, res)
+})
 
 export { app }

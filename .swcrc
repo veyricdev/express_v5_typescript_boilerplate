@@ -16,7 +16,9 @@
     }
   },
   "module": {
-    "type": "commonjs"
+    "type": "commonjs",
+    "ignoreDynamic": true,
+    "lazy": true
   },
   "sourceMaps": false
 }

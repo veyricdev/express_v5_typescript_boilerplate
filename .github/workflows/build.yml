@@ -24,6 +24,9 @@ jobs:
       - name: Run Build
         run: bun run build
 
+      - name: Remove folder and file for optimize
+        run: rm -rf types src tsconfig.json Dockerfile .dockerignore .env.example .github .husky .vscode
+
       - name: Deploy to Vercel
         run: |
           npm install -g vercel

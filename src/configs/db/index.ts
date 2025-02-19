@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import { env } from '../env'
+import { logger } from '../logger'
 import { countConnect } from './check-connect'
 import config from './config'
 
@@ -32,9 +33,9 @@ class Database {
 		mongoose
 			.connect(connectString, options)
 			.then((_) => {
-				console.log(`Connected Mongodb Success PRO! \nNumber connect: ${countConnect()}`)
+				logger.info(`Connected Mongodb Success PRO! \nNumber connect: ${countConnect()}`)
 			})
-			.catch((err) => console.error('Error Connect!', err))
+			.catch((err) => logger.error('Error Connect!', err))
 	}
 
 	static getInstance() {

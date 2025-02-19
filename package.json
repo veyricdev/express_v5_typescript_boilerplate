@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "tsx watch --clear-screen=false src/index.ts",
 		"clean": "rimraf dist",
-		"build": "swc src -d dist",
+		"build": "npm run clean && swc src -d dist",
 		"start": "node dist/src/index.js",
 		"lint": "biome check src/",
 		"lint:fix": "biome check src/ --fix",

@@ -1,6 +1,5 @@
 # Express V5 Boilerplate
 
-
 ## 🎉 Introduction
 
 Welcome to the Express V5 TypeScript Boilerplate
@@ -9,6 +8,8 @@ Welcome to the Express V5 TypeScript Boilerplate
 
 - 📁 Modular Structure
 - 💻 TypeScript Support
+- ✨ Use Github Action For Build And Deploy To Vercel
+- 🗻 Use Scalar For Docs API: `/docs`
 - 📦 Package Management With Bun Support
 - 🔗 Path Aliases
 - 🔒 Security: Helmet for HTTP header security and CORS setup

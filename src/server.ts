@@ -20,10 +20,17 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors(corsOptions))
 app.use(morgan(IS_PROD ? 'combined' : 'dev'))
 
-app.set('trust proxy', true)
-
 if (IS_PROD) {
-	app.use(helmet())
+	app.use(
+		helmet({
+			contentSecurityPolicy: {
+				directives: {
+					defaultSrc: ["'self'"],
+					scriptSrcElem: ["'self'", 'https://cdn.jsdelivr.net'],
+				},
+			},
+		})
+	)
 	app.use(compression())
 	app.use(limiter)
 }

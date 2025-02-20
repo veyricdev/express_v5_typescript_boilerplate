@@ -26,7 +26,7 @@ if (IS_PROD) {
 			contentSecurityPolicy: {
 				directives: {
 					defaultSrc: ["'self'"],
-					scriptSrcElem: ["'self'", 'https://cdn.jsdelivr.net'],
+					scriptSrc: ["'self'", 'https://cdn.jsdelivr.net'],
 				},
 			},
 		})

@@ -21,6 +21,7 @@ app.use(cors(corsOptions))
 app.use(morgan(IS_PROD ? 'combined' : 'dev'))
 
 if (IS_PROD) {
+	app.set('trust proxy', true)
 	app.use(
 		helmet({
 			contentSecurityPolicy: {

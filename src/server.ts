@@ -20,6 +20,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors(corsOptions))
 app.use(morgan(IS_PROD ? 'combined' : 'dev'))
 
+app.set('trust proxy', true)
+
 if (IS_PROD) {
 	app.use(helmet())
 	app.use(compression())
